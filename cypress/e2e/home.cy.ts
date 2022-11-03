@@ -4,13 +4,6 @@ describe('Home Page', () => {
   it('displays all 3 products on the home page', () => {
     cy.visit('/')
 
-    cy.intercept({
-      method: 'GET',
-      url: '/_next/static/development/**'
-    }).as('fetchDataFirst')
-
-    cy.wait('@fetchDataFirst').its('response.statusCode').should('equal', 200)
-
     cy.getBySel("product-tag")
       .eq(0)
       .within(() => {
