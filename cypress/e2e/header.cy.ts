@@ -29,3 +29,5 @@ describe('Header', () => {
       })
   })
 })
+
+export{}

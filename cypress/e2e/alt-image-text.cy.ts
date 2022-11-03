@@ -8,6 +8,7 @@ describe('Alt Text For Images', () => {
 
     it('images have the correct alt tags', () => {
         cy.getBySel('productCard-image')
+        // cy.get('[data-test="productCard-image"]')
             .eq(0)
             .find('img')
             .should('have.attr', 'alt')
@@ -16,3 +17,5 @@ describe('Alt Text For Images', () => {
             })
     })
 })
+
+export{}

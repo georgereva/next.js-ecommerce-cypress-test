@@ -33,3 +33,5 @@ describe('Home Page', () => {
       })
   })
 })
+
+export{}

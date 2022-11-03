@@ -10,3 +10,5 @@ describe('Alt Text For Images', () => {
         cy.getBySel('cookie').find('button').should('contain', 'Accept cookies')
     })
 })
+
+export{}

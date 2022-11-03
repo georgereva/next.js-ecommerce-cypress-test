@@ -13,15 +13,14 @@ interface SwatchProps {
   label?: string | null
 }
 
-const Swatch: React.FC<Omit<ButtonProps, 'variant'> & SwatchProps> = React.memo(
-  ({
-    active,
-    className,
-    color = '',
-    label = null,
-    variant = 'size',
-    ...props
-  }) => {
+const Swatch: React.FC<Omit<ButtonProps, 'variant'> & SwatchProps> = ({
+  active,
+  className,
+  color = '',
+  label = null,
+  variant = 'size',
+  ...props
+}) => {
     variant = variant?.toLowerCase()
 
     if (label) {
@@ -59,6 +58,5 @@ const Swatch: React.FC<Omit<ButtonProps, 'variant'> & SwatchProps> = React.memo(
       </Button>
     )
   }
-)
 
-export default Swatch
+export default React.memo(Swatch)

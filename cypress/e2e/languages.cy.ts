@@ -12,3 +12,5 @@ describe('Change Language', () => {
         cy.location('pathname').should('eq', '/es')
     })
 })
+
+export{}
