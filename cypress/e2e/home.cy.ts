@@ -1,8 +1,11 @@
 /// <reference types="cypress"/>
 
 describe('Home Page', () => {
-  it('displays all 3 products on the home page', () => {
+  beforeEach(() => {
     cy.visit('/')
+  })
+  
+  it('displays all 3 products on the home page', () => {
 
     cy.getBySel("product-tag")
       .eq(0)
